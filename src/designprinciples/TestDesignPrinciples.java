@@ -1,21 +1,21 @@
 package designprinciples;
 
-import baseinterface.isp.CountModule;
-import baseinterface.isp.InputModule;
-import baseinterface.isp.PrintModule;
-import bean.dip.Customer;
-import bean.dip.Singer;
-import bean.isp.Student;
-import bean.lod.Agent;
-import bean.lod.Company;
-import bean.lod.Fans;
-import bean.lod.Star;
-import bean.lsp.*;
-import impl.dip.ChineseSong;
-import impl.dip.EnglishSong;
-import impl.dip.ShaoguanShop;
-import impl.dip.WuyuanShop;
-import impl.isp.StuScoreList;
+import designprinciples.baseinterface.isp.CountModule;
+import designprinciples.baseinterface.isp.InputModule;
+import designprinciples.baseinterface.isp.PrintModule;
+import designprinciples.bean.dip.Customer;
+import designprinciples.bean.dip.Singer;
+import designprinciples.bean.isp.Student;
+import designprinciples.bean.lod.Agent;
+import designprinciples.bean.lod.Company;
+import designprinciples.bean.lod.Fans;
+import designprinciples.bean.lod.Star;
+import designprinciples.bean.lsp.*;
+import designprinciples.impl.dip.ChineseSong;
+import designprinciples.impl.dip.EnglishSong;
+import designprinciples.impl.dip.ShaoguanShop;
+import designprinciples.impl.dip.WuyuanShop;
+import designprinciples.impl.isp.StuScoreList;
 
 import java.util.HashMap;
 import java.util.Map;

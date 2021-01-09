@@ -1,5 +1,7 @@
 package example.demo.app.javabase.collection.array;
 
+import java.util.ArrayList;
+
 /**
  * **********************************************************************
  * Author: zbl
@@ -12,6 +14,9 @@ package example.demo.app.javabase.collection.array;
  */
 public class TestArray {
     public static void main(String[] args) {
+        ArrayList<String> arrayList = new ArrayList<>();
+        ArrayList<Object> objects = new ArrayList<>(20);
+        arrayList.add("");
 
         // 一维数组
         int[] numbers = new int[2];

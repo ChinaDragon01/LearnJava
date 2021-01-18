@@ -21,6 +21,8 @@ import java.util.function.BiConsumer;
  * <p>
  * java 自定义排序【Comparator升序降序的记法】：https://blog.csdn.net/u013066244/article/details/78895747
  *
+ * 复习一波HashMap底层实现原理解析  https://blog.csdn.net/qq_37840993/article/details/108048597
+ *
  * HashMap、Hashtable、HashSet三种hash集合的区别：https://blog.csdn.net/u011109589/article/details/80535412?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.edu_weight&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.edu_weight
  * Usage:
  * **********************************************************************

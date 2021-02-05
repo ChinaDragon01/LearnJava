@@ -15,16 +15,15 @@ package test;
  * *******************************************************
  */
 public class GCRootClassVariable {
-    private static int _10MB = 10 * 1024 * 1024;
-    private byte[] memory;
     private GCRootClassVariable classVariable;
     public GCRootClassVariable(int size){
-        memory = new byte[size];
+        byte[] memory = new byte[size];
     }
 
     public static void main(String[] args){
         System.out.println("程序开始:");
         printMemory();
+        int _10MB = 10 * 1024 * 1024;
         GCRootClassVariable g = new GCRootClassVariable(4 * _10MB);
         g.classVariable = new GCRootClassVariable(8 * _10MB);
         g = null;

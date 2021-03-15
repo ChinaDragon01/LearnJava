@@ -1,4 +1,4 @@
-package example.demo.app.javabase.collection.array;
+package test;
 
 import java.util.ArrayList;
 

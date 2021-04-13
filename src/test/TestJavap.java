@@ -1,5 +1,9 @@
 package test;
 
+import utils.PrintlnUtils;
+
+import java.util.*;
+
 /**
  * *******************************************************
  * Author: chinadragon
@@ -20,6 +24,47 @@ package test;
 public class TestJavap {
     public static void main(String[] args) {
         add();
+
+
+
+        /*
+            {
+                        "devId": "FF000000-0000-0038-3000-000000000700-39416",
+                        "XXXXXXXXXXXXXXXXXXXX5": "996",
+                        "XXXXXXXXXXXXXXXXXXXX4": "996",
+                        "XXXXXXXXXXXXXXXXXXXX7": "996",
+                        "XXXXXXXXXXXXXXXXXXXX10": "996",
+                        "XXXXXXXXXXXXXXXXXXXX6": "996",
+                        "XXXXXXXXXXXXXXXXXXXX1": "996",
+                        "XXXXXXXXXXXXXXXXXXXX3": "996",
+                        "XXXXXXXXXXXXXXXXXXXX2": "996",
+                        "devName": "一号主变",
+                        "XXXXXXXXXXXXXXXXXXXX9": "996",
+                        "XXXXXXXXXXXXXXXXXXXX8": "996"
+                    }
+
+
+         */
+
+        Map<String, String> strMap = new HashMap<>();
+        strMap.put("devId", "FF000000-0000-0038-3000-000000000700-39416");
+        strMap.put("XXXXXXXXXXXXXXXXXXXX5", "996");
+        strMap.put("XXXXXXXXXXXXXXXXXXXX4", "996");
+        strMap.put("XXXXXXXXXXXXXXXXXXXX7", "996");
+        strMap.put("XXXXXXXXXXXXXXXXXXXX10", "996");
+        strMap.put("devName", "一号主变");
+
+        Set<String> strings = strMap.keySet();
+        Iterator<String> keyIterator = strings.iterator();
+        String key = keyIterator.next();
+
+        Collection<String> values = strMap.values();
+        Iterator<String> valuesIterator = values.iterator();
+        String value = valuesIterator.next();
+
+
+        PrintlnUtils.println("key = "+key+" value =  "+value);
+
     }
 
     static int add(){

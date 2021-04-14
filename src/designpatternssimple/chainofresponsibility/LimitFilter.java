@@ -1,4 +1,4 @@
-package designmodle;
+package designpatternssimple.chainofresponsibility;
 
 abstract public class LimitFilter {
     private LimitFilter limitFilter;

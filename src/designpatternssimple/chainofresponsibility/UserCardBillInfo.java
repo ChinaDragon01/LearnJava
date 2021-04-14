@@ -1,6 +1,6 @@
-package designmodle;
+package designpatternssimple.chainofresponsibility;
 
-public class UserCardBillInfo {
+public class UserCardBillInfo extends UserInfo {
     public UserCardBillInfo() {
     }
 
@@ -8,7 +8,5 @@ public class UserCardBillInfo {
         this.userId = userId;
     }
 
-    public String userId;
     public double Bill;
-    public int state;
 }

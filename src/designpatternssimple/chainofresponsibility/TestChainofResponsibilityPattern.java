@@ -1,4 +1,6 @@
-package designmodle;
+package designpatternssimple.chainofresponsibility;
+
+import utils.PrintlnUtils;
 
 /**
  * 责任链模式
@@ -39,24 +41,37 @@ package designmodle;
  */
 public class TestChainofResponsibilityPattern {
     public static void main(String[] args) {
+//        String userId = "us5";
+//        String userId = "us1";
+        String userId = "us7";
+        UserInfo userInfo = new UserInfo(userId);
+        boolean canLogoutResult = canLogout(userId);
+        PrintlnUtils.println("是否注销信用卡 canLogoutResult = " + canLogoutResult);
 
     }
 
-    public boolean canLogout(String userId) {
+    public static boolean canLogout(String userId) {
         //获取用户信息
         UserInfo userInfo = getUserInfo(userId);
 
         // 构造注销信用卡限制过滤器链条
         LogoutLimitFilterChain filterChain = new LogoutLimitFilterChain();
-        filterChain.addFilter(new UserLogoutUnpaidBillsLimitFilter());
-        filterChain.addFilter(new UserLogoutOverflowLimitFilter());
-        filterChain.addFilter(new UserLogoutGiveUpPointsLimitFilter());
+        UserLogoutUnpaidBillsLimitFilter userLogoutUnpaidBillsLimitFilter = new UserLogoutUnpaidBillsLimitFilter();
+        UserLogoutOverflowLimitFilter userLogoutOverflowLimitFilter = new UserLogoutOverflowLimitFilter();
+        UserLogoutGiveUpPointsLimitFilter userLogoutGiveUpPointsLimitFilter = new UserLogoutGiveUpPointsLimitFilter();
+
+        userLogoutOverflowLimitFilter.setLimitFilter(userLogoutGiveUpPointsLimitFilter);
+        userLogoutUnpaidBillsLimitFilter.setLimitFilter(userLogoutOverflowLimitFilter);
+
+        filterChain.addFilter(userLogoutUnpaidBillsLimitFilter);
+        filterChain.addFilter(userLogoutOverflowLimitFilter);
+        filterChain.addFilter(userLogoutGiveUpPointsLimitFilter);
         boolean checkResult = filterChain.doFilter(filterChain, userInfo);
         return checkResult;
     }
 
 
-    public UserInfo getUserInfo(String userId) {
-        return new UserInfo();
+    public static UserInfo getUserInfo(String userId) {
+        return new UserInfo(userId);
     }
 }

@@ -1,4 +1,4 @@
-package designmodle;
+package designpatternssimple.chainofresponsibility;
 
 import java.util.ArrayList;
 import java.util.List;

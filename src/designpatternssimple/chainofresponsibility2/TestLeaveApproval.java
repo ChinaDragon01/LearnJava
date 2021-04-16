@@ -1,5 +1,8 @@
 package designpatternssimple.chainofresponsibility2;
 
+/**
+ *  责任链模式 http://c.biancheng.net/view/1383.html
+ */
 public class TestLeaveApproval {
     public static void main(String[] args) {
         //组装责任链

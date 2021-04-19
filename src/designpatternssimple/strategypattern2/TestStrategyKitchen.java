@@ -1,5 +1,8 @@
 package designpatternssimple.strategypattern2;
 
+/**
+ * 策略模式 http://c.biancheng.net/view/1378.html
+ */
 public class TestStrategyKitchen {
     public static void main(String[] args) {
         Kitchen kitchen = new Kitchen();

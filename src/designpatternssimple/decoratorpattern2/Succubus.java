@@ -1,5 +1,7 @@
 package designpatternssimple.decoratorpattern2;
 
+import utils.PrintlnUtils;
+
 public class Succubus extends Changer{
     public Succubus(Morrigan m) {
         super(m);
@@ -7,11 +9,12 @@ public class Succubus extends Changer{
 
     @Override
     public void display() {
+        PrintlnUtils.println("Succubus display ");
         setChanger();
         super.display();
     }
 
     public void setChanger() {
-        ((Original) super.m).setImage("Morrigan1.jpg");
+        ((Original) super.m).setImage("Morrigan0.jpg");
     }
 }

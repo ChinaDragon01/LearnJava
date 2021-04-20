@@ -1,5 +1,7 @@
 package designpatternssimple.decoratorpattern2;
 
+import utils.PrintlnUtils;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -9,7 +11,7 @@ import java.awt.*;
  */
 public class Original extends JFrame implements Morrigan {
 
-    private String t = "Morrigan0.jpg";
+    private String t = "Morrigan1.jpg";
 
     public Original() {
         super("《恶魔战士》中的莫莉卡·安斯兰");
@@ -22,7 +24,9 @@ public class Original extends JFrame implements Morrigan {
     @Override
     public void display() {
         this.setLayout(new FlowLayout());
-        JLabel l1 = new JLabel(new ImageIcon("src/decorator/" + t));
+//        JLabel l1 = new JLabel(new ImageIcon("src/decorator/" + t));
+        PrintlnUtils.println("t = "+t);
+        JLabel l1 = new JLabel(new ImageIcon("src/"+t));
         this.add(l1);
         this.pack();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

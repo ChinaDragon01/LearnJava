@@ -1,5 +1,7 @@
 package designpatternssimple.decoratorpattern2;
 
+import utils.PrintlnUtils;
+
 public class Girl extends Changer {
     public Girl(Morrigan m) {
         super(m);
@@ -7,6 +9,8 @@ public class Girl extends Changer {
 
     @Override
     public void display() {
+        PrintlnUtils.println("Girl display ");
+
         setChanger();
         super.display();
     }

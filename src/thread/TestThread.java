@@ -1,3 +1,4 @@
+package thread;
 
 /**
  * **********************************************************************
@@ -6,6 +7,8 @@
  * Name:
  * Overview:
  * Usage:
+ * 唯一限定私有量 -- ThreadLocal
+ * https://blog.csdn.net/weixin_43495590/article/details/96130961
  * **********************************************************************
  */
 public class TestThread {
@@ -14,6 +17,7 @@ public class TestThread {
     public static void main(String[] args) {
         new Thread1().start();
         new Thread2().start();
+        ThreadLocal threadLocal;
 
     }
 

@@ -46,14 +46,14 @@ public class Test3 {
         /*
             regionMatches(int firstStart,String other, int ortherStart,int length)方法用来从当前字符串参数firstStart指定的位置开始处取长度为length的一个子串，
             并将这个子串和参数other指定的一个子串进行比较。其中other指定的子串是指从other字符串的orther字符串的ortherStart所指定的位置开始，开始截取长度为length 的一个子串。
-            如果两个子串相同该方法就返回true,否则返回FALSE，
+            如果两个字符串相，该方法就返回true,否则返回FALSE，
          */
 
         //https://www.jianshu.com/p/eb497adf6297?utm_campaign
         String s = "abcdefg";
         String s2 = "Cde";
-        boolean b = s.regionMatches(true, 0, s2, 0, s2.length());
-        PrintlnUtils.println("b = "+b);
+        boolean b = s.regionMatches(true, 2, s2, 0, s2.length());
+        PrintlnUtils.println("b = "+b);//b = true
 
     }
 }

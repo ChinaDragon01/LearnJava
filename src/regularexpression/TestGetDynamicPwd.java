@@ -17,11 +17,9 @@ import java.util.regex.Pattern;
 public class TestGetDynamicPwd {
     public static void main(String[] args) {
 
-
         getDynamicSmsVerifyCode();
 
         getDynamicSmsVerifyCode2();
-
     }
 
     /**
@@ -35,23 +33,21 @@ public class TestGetDynamicPwd {
         String content = "你好，验证是745234，请在5分钟内提交验证码，不要告诉陌生人";
 
         // 此正则表达式验证六位数字的短信验证码
-        int YZMLENGTH = 6;
+        int smsVerifyCodeLength = 6;
 
-        Pattern pattern = Pattern.compile("(?<![0-9])([0-9]{" + YZMLENGTH + "})(?![0-9])");
-
-//        Pattern pattern = Pattern.compile("(?<![0-9])([0-9])(?![0-9])");
+        Pattern pattern = Pattern.compile("(?<![0-9])([0-9]{" + smsVerifyCodeLength + "})(?![0-9])");
 
         Matcher matcher = pattern.matcher(content);
 
-        String dynamicPwd = "";
+        String smsVerifyCode = "";
 
         while (matcher.find()) {
 
-            dynamicPwd = matcher.group();
+            smsVerifyCode = matcher.group();
 
         }
 
-        PrintlnUtils.println("dynamicPwd = " + dynamicPwd);
+        PrintlnUtils.println("smsVerifyCode = " + smsVerifyCode);
     }
 
     public static void getDynamicSmsVerifyCode2() {
@@ -62,7 +58,7 @@ public class TestGetDynamicPwd {
             Matcher m = p.matcher(str);
             while (m.find()) {
                 PrintlnUtils.println("匹配结果：" + m.group());
-                PrintlnUtils.println("提取组1：" + m.group(1));
+                PrintlnUtils.println("提取组1 验证码：" + m.group(1));
             }
         }
 

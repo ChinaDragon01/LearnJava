@@ -7,6 +7,9 @@ import java.text.MessageFormat;
 /**
  * Lua中string.format转义符的使用
  * https://blog.csdn.net/canglangclient/article/details/49154093
+ *
+ * JAVA字符串格式化-String.format()的使用
+ * https://blog.csdn.net/lonely_fireworks/article/details/7962171
  */
 public class TestStringFormat {
     public static void main(String[] args) {

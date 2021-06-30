@@ -26,6 +26,15 @@ public class DynamicSmsVerifyCode {
         getDynamicSmsVerifyCode1();
         getDynamicSmsVerifyCode2();
         getDynamicSmsVerifyCode3();
+        strFormat();
+    }
+
+    public static void strFormat(){
+        String str = "你%s的业绩在%1$s组排名%2$d，你战胜了%2$d%的同部门成员，请继续努力！！！";
+        String str2 = "%1$s&#160;&#160;&#160;&#160;一共有%2$d条通话记录。";
+        String formatResult = String.format(str, "2021-06-29", "s1", "2", "98.16");
+        String formatResult2 = String.format(str2, "2021-06-29", 3);
+        PrintlnUtils.println("字符串替换结果 formatResult2 = "+formatResult2);
     }
 
     /**

@@ -16,6 +16,9 @@ package test;
  * 让你彻底理解volatile https://www.jianshu.com/p/157279e6efdb
  *
  * java内存模型以及happens-before规则 https://www.jianshu.com/p/d52fea0d6ba5
+ *
+ * 深入解析synchronized实现原理，如何保证原子性、有序性和可见性？
+ * https://blog.csdn.net/qq_36270361/article/details/107708132
  * *******************************************************
  */
 public class TestSynchronizedVolatile {

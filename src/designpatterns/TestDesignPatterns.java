@@ -18,9 +18,11 @@ import designpatterns.impl.HorseFarm;
  * Overview:
  * Usage:
  * <p>
- * 面向对象设计原则 https://blog.csdn.net/ChinaDragon10/article/details/111400763
+ * 面向对象设计原则
+ * https://blog.csdn.net/ChinaDragon10/article/details/111400763
  * <p>
- * GoF 的 23 种设计模式的分类和功能 http://c.biancheng.net/view/1320.html
+ * GoF 的 23 种设计模式的分类和功能
+ * http://c.biancheng.net/view/1320.html
  * *******************************************************
  */
 public class TestDesignPatterns {

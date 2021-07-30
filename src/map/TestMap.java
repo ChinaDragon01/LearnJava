@@ -15,7 +15,8 @@ import java.util.function.BiConsumer;
  * Time: 2020/7/29 14:36
  * Name:
  * Overview:
- * Java map集合深入学习：https://blog.csdn.net/qq_37939251/article/details/83480242
+ * Java map集合深入学习：
+ * https://blog.csdn.net/qq_37939251/article/details/83480242
  * <p>
  * Map的常见问题:      https://blog.csdn.net/icardi9/article/details/78488853
  * <p>

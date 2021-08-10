@@ -7,5 +7,17 @@ package annotation;
 public class TestAnnotation {
     public static void main(String[] args) {
 
+        Apple apple = new Apple();
+//        apple.setAppleName("红苹果");
+//        apple.setAppleColor(FruitColor.Color.RED.name());
+//        apple.displayName();
+//        FruitInfoUtil.getFruitInfo(Apple.class);
+        FruitInfoUtil.getFruitInfo(apple.getClass());
+        //水果名称：苹果
+        //
+        //水果颜色：RED
+        //
+        //供应商信息：供应商编号：1  供应商名称：陕西红富士集团  供应商地址：陕西省西安市延安路89号红富士大厦
+
     }
 }

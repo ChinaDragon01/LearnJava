@@ -18,6 +18,7 @@ public class Testvolatile {
     private static int count = 0;
     private int a = 0;
     private volatile boolean flag = false;
+    public static volatile int counter = 1;
 
     public void writer() {
         a = 1;          //1
@@ -30,9 +31,12 @@ public class Testvolatile {
         }
     }
 
-    private static volatile boolean isOver = false;
+//    private static volatile boolean isOver = false;
+    private static boolean isOver = false;
 
     public static void main(String[] args) {
+        counter = 2;
+        PrintlnUtils.println("counter = "+counter);
 
         Thread thread = new Thread(new Runnable() {
             @Override

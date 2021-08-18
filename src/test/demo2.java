@@ -46,10 +46,30 @@ public class demo2 {
         hashSet.addAll(list3);
 
         List<User> list5 = new ArrayList<>(hashSet);
-		for (User user : list5) {
-			PrintlnUtils.println(user.getName());
-		}
+        for (User user : list5) {
+//            PrintlnUtils.println(user.getName());
+        }
 
+        List list = new ArrayList();
+        list.add("1IcjjqiztBEVED9V1BWFyw==");
+        list.add("oJlabbU4xURSizhIbt3KnA==");
+        list.add("L1ht3hm8mpAF3IrDYsOvJQ==");
+
+
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < list.size(); i++) {
+            stringBuilder.append(list.get(i));
+            if (i == list.size() - 1) {
+                break;
+            }
+
+            stringBuilder.append(",");
+
+        }
+        String join = String.join(",", list);
+
+        PrintlnUtils.println("拼接后的加密手机号码 join ：" + join);
+        PrintlnUtils.println("拼接后的加密手机号码 stringBuilder ：" + stringBuilder.toString());
 
     }
 

@@ -9,8 +9,14 @@ import utils.PrintlnUtils;
  */
 public class TestAlg1 {
     public static void main(String[] args) {
-        test1();
-        test2();
+//        test1();
+//        test2();
+
+        int FIXED_ITEM_COUNT = 2;
+//        String number = Integer.valueOf(FIXED_ITEM_COUNT).toString();
+//        String number = Integer.toBinaryString(FIXED_ITEM_COUNT).toString();
+        String number = Integer.toOctalString(FIXED_ITEM_COUNT);
+        PrintlnUtils.println("number = "+number);
 
     }
 

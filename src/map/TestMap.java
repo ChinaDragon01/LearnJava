@@ -26,6 +26,14 @@ import java.util.function.BiConsumer;
  *
  * HashMap、Hashtable、HashSet三种hash集合的区别：https://blog.csdn.net/u011109589/article/details/80535412?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.edu_weight&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.edu_weight
  * Usage:
+ *
+ *
+ * Java数据结构和算法（十三）——哈希表
+ * https://www.cnblogs.com/ysocean/p/8032656.html
+ *
+ * 数据结构之哈希表
+ * https://blog.csdn.net/shiluoxuan/article/details/81364175
+ *
  * **********************************************************************
  */
 public class TestMap {

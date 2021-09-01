@@ -10,6 +10,9 @@ import java.lang.reflect.Method;
 /**
  * 反射创建实例,方法调用,修改字段
  * https://www.cnblogs.com/takumicx/p/9379308.html
+ *
+ * Java基础篇：反射机制详解
+ * https://blog.csdn.net/a745233700/article/details/82893076
  */
 public class ReflectOpration {
     private String name;

@@ -3,7 +3,10 @@ package test;
 import bean.User;
 import utils.PrintlnUtils;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 
 public class demo2 {
@@ -62,6 +65,49 @@ public class demo2 {
             if (i == list.size() - 1) {
                 break;
             }
+//        List<User> list5 = new ArrayList<>(hashSet);
+//		for (User user : list5) {
+//			PrintlnUtils.println(user.getName());
+//		}
+
+        //todo 待整理
+        PrintlnUtils.println("1 + 1 = " + (1 + 1) + "   等于 " + " 1 << 1 = " + (1 << 1));
+        PrintlnUtils.println("2 + 2 = " + (2 + 2) + "   等于 " + " 1 << 2 = " + (1 << 2));
+        PrintlnUtils.println("1 << 3 = " + (1 << 3));
+        PrintlnUtils.println("1 << 4 = " + (1 << 4));
+        PrintlnUtils.println("1 << 5 = " + (1 << 5));
+        PrintlnUtils.println("1 << 6 = " + (1 << 6));
+        PrintlnUtils.println("1 << 7 = " + (1 << 7));
+        PrintlnUtils.println("1 << 8 = " + (1 << 8));
+        PrintlnUtils.println("1 << 9 = " + (1 << 9));
+        PrintlnUtils.println("1 << 10 = " + (1 << 10));
+        PrintlnUtils.println("1 << 11 = " + (1 << 11));
+        PrintlnUtils.println("2 << 6 = " + (2 << 11));
+
+
+        //1 << 1 = 2
+        //
+        //1 << 2 = 4
+        //
+        //1 << 3 = 8
+        //
+        //1 << 4 = 16
+        //
+        //1 << 5 = 32
+        //
+        //1 << 6 = 64
+        //
+        //1 << 7 = 128
+        //
+        //1 << 8 = 256
+        //
+        //1 << 9 = 512
+        //
+        //1 << 10 = 1024
+        //
+        //1 << 11 = 2048
+        //
+        //2 << 0 = 1
 
             stringBuilder.append(",");
 

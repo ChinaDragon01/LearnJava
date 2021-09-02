@@ -1,5 +1,9 @@
 package thread;
 
+import utils.PrintlnUtils;
+
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  * **********************************************************************
  * Author: zbl
@@ -12,10 +16,14 @@ package thread;
  * <p>
  * Java中的ThreadLocal详解
  * https://www.cnblogs.com/fsmly/p/11020641.html
+ * <p>
+ * java-StackTraceElement获取类、方法执行调用栈的详细过程
+ * https://blog.csdn.net/lovequanquqn/article/details/81585991
  * **********************************************************************
  */
 public class TestThread {
     private static volatile boolean flag = true;
+    static AtomicInteger atomicInteger = new AtomicInteger();
     static ThreadLocal<String> localVar = new ThreadLocal<>();
 
     static void print(String str) {
@@ -31,6 +39,53 @@ public class TestThread {
         new Thread2().start();
 
 
+        int num = 0x8100;
+        String strnum = Integer.toString(num);
+        int reusltnum = Integer.parseInt(strnum.substring(2), 10);
+        PrintlnUtils.println("reusltnum = " + reusltnum+" toBinaryString: "+Integer.toOctalString(2));
+
+
+//        atomicInteger.set(1);
+//        int len = 10;
+//        for (int i = len; i > 0; i--) {
+//            PrintlnUtils.println("atomicInteger incrementAndGet = " + atomicInteger.incrementAndGet() + " i = " + i);
+//        }
+//
+//        for (int i = 0; i < len; i++) {
+//            PrintlnUtils.println("atomicInteger incrementAndGet = " + atomicInteger.decrementAndGet() + " i = " + i);
+//        }
+//
+//
+//        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
+//        for (int i = 0; i < stackTrace.length; i++) {
+//            PrintlnUtils.println(" stackTrace : " + getExtInfo(stackTrace[i]));
+//        }
+
+
+    }
+
+    public static String getExtInfo(StackTraceElement stackTraceElement) {
+
+        String separator = " & ";
+        StringBuilder sb = new StringBuilder("[");
+
+
+        String threadName = Thread.currentThread().getName();
+        String fileName = stackTraceElement.getFileName();
+        String className = stackTraceElement.getClassName();
+        String methodName = stackTraceElement.getMethodName();
+        long threadID = Thread.currentThread().getId();
+        int lineNumber = stackTraceElement.getLineNumber();
+
+        sb.append("ThreadId=").append(threadID).append(separator);
+        sb.append("ThreadName=").append(threadName).append(separator);
+        sb.append("FileName=").append(fileName).append(separator);
+        sb.append("ClassName=").append(className).append(separator);
+        sb.append("MethodName=").append(methodName).append(separator);
+        sb.append("LineNumber=").append(lineNumber);
+
+        sb.append(" ] ");
+        return sb.toString();
     }
 
     static class Thread1 extends Thread {
@@ -42,7 +97,7 @@ public class TestThread {
             print(this.getName());
 
             //打印本地变量
-            System.out.println(this.getName()+" after remove : " + localVar.get());
+            System.out.println(this.getName() + " after remove : " + localVar.get());
 
 //            while (flag) {
 //                System.out.println("Thread1 this.getName() = " + this.getName());
@@ -59,7 +114,7 @@ public class TestThread {
             print(this.getName());
 
             //打印本地变量
-            System.out.println(this.getName()+" after remove : " + localVar.get());
+            System.out.println(this.getName() + " after remove : " + localVar.get());
 
 //            while (flag) {
 //                System.out.println("Thread2 this.getName() = " + this.getName());

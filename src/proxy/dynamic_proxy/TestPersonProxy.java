@@ -1,10 +1,5 @@
 package proxy.dynamic_proxy;
 
-import bean.User;
-import utils.PrintlnUtils;
-
-import java.lang.reflect.Proxy;
-
 /**
  * * java动态代理Proxy.newProxyInstance
  * * https://blog.csdn.net/u012326462/article/details/81293186

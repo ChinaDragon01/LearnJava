@@ -70,6 +70,16 @@ public class demo2 {
 //			PrintlnUtils.println(user.getName());
 //		}
 
+
+
+            stringBuilder.append(",");
+
+        }
+        String join = String.join(",", list);
+
+//        PrintlnUtils.println("拼接后的加密手机号码 join ：" + join);
+//        PrintlnUtils.println("拼接后的加密手机号码 stringBuilder ：" + stringBuilder.toString());
+
         //todo 待整理
         PrintlnUtils.println("1 + 1 = " + (1 + 1) +         "           =      " + " 1 << 1 = " + (1 << 1));
         PrintlnUtils.println("2 + 2 = " + (2 + 2) +         "           =      " + " 1 << 2 = " + (1 << 2));
@@ -81,14 +91,6 @@ public class demo2 {
         PrintlnUtils.println("128 + 128 = " + (128 + 128) + "     =      " + " 1 << 8 = " + (1 << 8));
         PrintlnUtils.println("256 + 256 = " + (256 + 256) + "     =      " + " 1 << 9 = " + (1 << 9));
         PrintlnUtils.println("512 + 512 = " + (512 + 512) + "    =      " + " 1 << 10 = " + (1 << 10));
-
-            stringBuilder.append(",");
-
-        }
-        String join = String.join(",", list);
-
-        PrintlnUtils.println("拼接后的加密手机号码 join ：" + join);
-        PrintlnUtils.println("拼接后的加密手机号码 stringBuilder ：" + stringBuilder.toString());
 
     }
 

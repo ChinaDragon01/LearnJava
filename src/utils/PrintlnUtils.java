@@ -11,7 +11,7 @@ package utils;
  */
 public class PrintlnUtils {
     public static void println(String text) {
-        System.out.println(text + "\n");
+        System.out.println("    "+text + "\n");
     }
 
     public static void print(String text) {
